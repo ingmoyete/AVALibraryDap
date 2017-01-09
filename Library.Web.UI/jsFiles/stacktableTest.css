@@ -1,0 +1,71 @@
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+	/* Force table to not be like tables anymore */
+		table:not(.pagination-ys), thead:not(.pagination-ys), tbody:not(.pagination-ys), th:not(.pagination-ys), td:not(.pagination-ys), tr:not(.pagination-ys) {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr:not(.pagination-ys) {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		tr:not(.pagination-ys) { border: 1px solid #ccc; }
+
+		td:not(.pagination-ys) {
+			/* Behave  like a "row" */
+			position: relative;
+			padding-left: 50%;
+		}
+        /*
+        tr.pagination-ys table, tr.pagination-ys thead, tr.pagination-ys tbody, tr.pagination-ys th, tr.pagination-ys td, tr.pagination-ys tr{
+            border: 1px blue solid;
+            display:table;
+        }*/
+
+		td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 6px;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+
+            
+
+	
+	/*
+	Label the data
+	*/
+    
+	/*td:nth-of-type(1):before { content: "BookId"; }*/
+	td:nth-of-type(2):before { content: "BookId"; }
+	td:nth-of-type(3):before { content: "Title"; }
+    
+	td:nth-of-type(4):before { content: "Author"; }
+	td:nth-of-type(5):before { content: "SectionName"; }
+	td:nth-of-type(6):before { content: "Copies" }
+    
+	td:nth-of-type(7):before { content: "Ibsn"; }
+
+
+   /*
+        tr.pagination-ys table, tr.pagination-ys thead, tr.pagination-ys tbody, tr.pagination-ys th, tr.pagination-ys td, tr.pagination-ys tr{
+            border: 1px blue solid;
+            display:inline;
+        }*/
+*/
+}

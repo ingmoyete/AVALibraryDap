@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB3AF129-3BA6-4839-889F-A5E6CD602380}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library.Web.UI</RootNamespace>
+    <AssemblyName>Library.Web.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\stacktable.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="images\drupal-and-jquery-logos - Copy.png" />
+    <Content Include="images\microsoft-dotnet - Copy.jpg" />
+    <Content Include="images\twitter_bootstrap-wallpaper-1920x1440 - Copy.jpg" />
+    <Content Include="jsFiles\bootstrapPagination.css" />
+    <Content Include="jsFiles\jquery-ui.js" />
+    <Content Include="jsFiles\jquery-validation-1.14.0.zip" />
+    <None Include="Properties\PublishProfiles\doc-management.davidalcocer.com - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Book\Copies.aspx" />
+    <Content Include="Book\Delete.aspx" />
+    <Content Include="Book\DeleteCopies.aspx" />
+    <Content Include="Book\DeleteList.aspx" />
+    <Content Include="Book\Insert.aspx" />
+    <Content Include="Book\MainList.aspx" />
+    <Content Include="Book\Update.aspx" />
+    <Content Include="Book\UpdateCopies.aspx" />
+    <Content Include="Book\UpdateList.aspx" />
+    <Content Include="css.css" />
+    <Content Include="jsFiles\additional-methods.min.js" />
+    <Content Include="jsFiles\jquery.validate.min.js" />
+    <Content Include="jsFiles\PickAustralianDate.js" />
+    <Content Include="jsFiles\stacktableTest.css" />
+    <Content Include="jsFiles\stacktable.js" />
+    <Content Include="Loan\DeleteLoan.aspx" />
+    <Content Include="Loan\InsertLoan.aspx" />
+    <Content Include="Loan\MainListLoan.aspx" />
+    <Content Include="Loan\UpdateLoan.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Users\DeleteListUser.aspx" />
+    <Content Include="Users\DeleteUsers.aspx" />
+    <Content Include="Users\InsertUser.aspx" />
+    <Content Include="Users\MainList.aspx" />
+    <Content Include="Users\UpdateListUser.aspx" />
+    <Content Include="Users\UpdateUser.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Book\Copies.aspx.cs">
+      <DependentUpon>Copies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book\Copies.aspx.designer.cs">
+      <DependentUpon>Copies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book\DeleteCopies.aspx.cs">
+      <DependentUpon>DeleteCopies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book\DeleteCopies.aspx.designer.cs">
+      <DependentUpon>DeleteCopies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book\DeleteList.aspx.cs">
+      <DependentUpon>DeleteList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book\DeleteList.aspx.designer.cs">
+      <DependentUpon>DeleteList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book\MainList.aspx.cs">
+      <DependentUpon>MainList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book\MainList.aspx.designer.cs">
+      <DependentUpon>MainList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book\Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book\Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book\UpdateCopies.aspx.cs">
+      <DependentUpon>UpdateCopies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book\UpdateCopies.aspx.designer.cs">
+      <DependentUpon>UpdateCopies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book\UpdateList.aspx.cs">
+      <DependentUpon>UpdateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book\UpdateList.aspx.designer.cs">
+      <DependentUpon>UpdateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\DeleteLoan.aspx.cs">
+      <DependentUpon>DeleteLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loan\DeleteLoan.aspx.designer.cs">
+      <DependentUpon>DeleteLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\InsertLoan.aspx.cs">
+      <DependentUpon>InsertLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loan\InsertLoan.aspx.designer.cs">
+      <DependentUpon>InsertLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\MainListLoan.aspx.cs">
+      <DependentUpon>MainListLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loan\MainListLoan.aspx.designer.cs">
+      <DependentUpon>MainListLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\UpdateLoan.aspx.cs">
+      <DependentUpon>UpdateLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loan\UpdateLoan.aspx.designer.cs">
+      <DependentUpon>UpdateLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\DeleteListUser.aspx.cs">
+      <DependentUpon>DeleteListUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\DeleteListUser.aspx.designer.cs">
+      <DependentUpon>DeleteListUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\DeleteUsers.aspx.cs">
+      <DependentUpon>DeleteUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\DeleteUsers.aspx.designer.cs">
+      <DependentUpon>DeleteUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\InsertUser.aspx.cs">
+      <DependentUpon>InsertUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\InsertUser.aspx.designer.cs">
+      <DependentUpon>InsertUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\MainList.aspx.cs">
+      <DependentUpon>MainList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\MainList.aspx.designer.cs">
+      <DependentUpon>MainList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UpdateListUser.aspx.cs">
+      <DependentUpon>UpdateListUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UpdateListUser.aspx.designer.cs">
+      <DependentUpon>UpdateListUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BussinessLibrary\Library.Bussiness.csproj">
+      <Project>{8f5f5314-8f63-4347-bf79-6e295c97c75e}</Project>
+      <Name>Library.Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLibrary\Library.Data.csproj">
+      <Project>{f8906590-65f3-406b-98bc-898d43bc1ad8}</Project>
+      <Name>Library.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52151</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52151/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
